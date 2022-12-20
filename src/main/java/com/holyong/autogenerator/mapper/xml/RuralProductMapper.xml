@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.autogenerator.mapper.RuralProductMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.autogenerator.entity.RuralProduct">
+        <id column="id" property="id" />
+        <result column="SMID" property="smid" />
+        <result column="product_name" property="productName" />
+        <result column="product_address" property="productAddress" />
+        <result column="product_type" property="productType" />
+        <result column="pick_time" property="pickTime" />
+        <result column="pick_quantity" property="pickQuantity" />
+        <result column="product_link" property="productLink" />
+        <result column="product_describe" property="productDescribe" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, SMID, product_name, product_address, product_type, pick_time, pick_quantity, product_link, product_describe
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">rural_product</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">rural_product as product</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>

@@ -1,0 +1,42 @@
+
+#项目工程使用的端口号
+server:
+  port: 8080
+
+spring:
+  application:
+    name: generator
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/element_modeling?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong&useSSL=false
+    username: root
+    password: Root@root123
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+
+# ===== 自定义swagger配置 ===== #
+#swagger:
+#  enable: true
+#  application-name: ${spring.application.name}
+#  application-version: 1.0 #接口文档版本
+#  application-description: Holyong api info   #swagger.application-description=该接口文档的描述
+#
+
+swagger:
+  enable: true
+  applicationName: Swagger-Test
+  applicationVersion: dev
+  applicationDescription: dev
+  groupName: Swagger-Test
+
+mybatis-plus:
+  mapper-locations: classpath:com/holyong/autogenerator/mapper/xml/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

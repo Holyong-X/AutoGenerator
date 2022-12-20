@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.autogenerator.mapper.ParkLotMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.autogenerator.entity.ParkLot">
+        <id column="id" property="id" />
+        <result column="smid" property="smid" />
+        <result column="park_number" property="parkNumber" />
+        <result column="park_name" property="parkName" />
+        <result column="park_url" property="parkUrl" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, smid, park_number, park_name, park_url
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">park_lot</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">park_lot as lot</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>

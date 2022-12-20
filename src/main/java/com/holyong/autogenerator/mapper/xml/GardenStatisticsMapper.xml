@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.autogenerator.mapper.GardenStatisticsMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.autogenerator.entity.GardenStatistics">
+        <id column="id" property="id" />
+        <result column="smid" property="smid" />
+        <result column="name" property="name" />
+        <result column="area_name" property="areaName" />
+        <result column="crop_growth_progress" property="cropGrowthProgress" />
+        <result column="plothistory" property="plothistory" />
+        <result column="plant_type" property="plantType" />
+        <result column="claim_status" property="claimStatus" />
+        <result column="light_intensity" property="lightIntensity" />
+        <result column="seed_plot" property="seedPlot" />
+        <result column="history_max_amount" property="historyMaxAmount" />
+        <result column="history_cost" property="historyCost" />
+        <result column="garden_address" property="gardenAddress" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, smid, name, area_name, crop_growth_progress, plothistory, plant_type, claim_status, light_intensity, seed_plot, history_max_amount, history_cost, garden_address
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">garden_statistics</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">garden_statistics as statistics</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>

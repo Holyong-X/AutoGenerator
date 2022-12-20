@@ -1,0 +1,30 @@
+package $!{package.ServiceImpl};
+
+import $!{package.Entity}.$!{entity};
+import $!{package.Mapper}.$!{table.mapperName};
+import $!{package.Service}.$!{table.serviceName};
+import $!{superServiceImplClassPackage};
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+
+/**
+ * @author $!{author}
+ * @date $!{date}
+ * @description $!{table.comment} 服务实现类
+ */
+@Service
+@Transactional(rollbackFor = Exception.class)
+#if($!{kotlin})
+open class $!{table.serviceImplName} : $!{superServiceImplClass}<$!{table.mapperName}, $!{entity}>(), $!{table.serviceName} {
+}
+#else
+public class $!{table.serviceImplName} extends $!{superServiceImplClass}<$!{table.mapperName}, $!{entity}> implements $!{table.serviceName} {
+##    public IPage<$!{entity}> pageList(Map map){
+##        PageParams pageParams = new PageParams(map);
+##        $!{entity} query = pageParams.mapToObject($!{entity}.class);
+##        QueryWrapper<$!{entity}> queryWrapper = new QueryWrapper<>();
+##        return this.page(new PageParams(map), queryWrapper);
+##    }
+}
+#end

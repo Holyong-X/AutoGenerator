@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.autogenerator.mapper.CompanyInfoMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.autogenerator.entity.CompanyInfo">
+        <id column="id" property="id" />
+        <result column="smid" property="smid" />
+        <result column="company_name" property="companyName" />
+        <result column="company_code" property="companyCode" />
+        <result column="company_address" property="companyAddress" />
+        <result column="company_phone" property="companyPhone" />
+        <result column="company_capital" property="companyCapital" />
+        <result column="company_personnel" property="companyPersonnel" />
+        <result column="company_creat_time" property="companyCreatTime" />
+        <result column="legal_representative" property="legalRepresentative" />
+        <result column="business_status" property="businessStatus" />
+        <result column="administrative_division" property="administrativeDivision" />
+        <result column="paid_capital" property="paidCapital" />
+        <result column="company_type" property="companyType" />
+        <result column="company_industry" property="companyIndustry" />
+        <result column="company_commercecode" property="companyCommercecode" />
+        <result column="company_organizationcode" property="companyOrganizationcode" />
+        <result column="taxpayer_code" property="taxpayerCode" />
+        <result column="taxpayer_aptitude" property="taxpayerAptitude" />
+        <result column="business_term" property="businessTerm" />
+        <result column="approval_date" property="approvalDate" />
+        <result column="registration_authority" property="registrationAuthority" />
+        <result column="nature_business" property="natureBusiness" />
+        <result column="company_describe" property="companyDescribe" />
+        <result column="company_logo" property="companyLogo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, smid, company_name, company_code, company_address, company_phone, company_capital, company_personnel, company_creat_time, legal_representative, business_status, administrative_division, paid_capital, company_type, company_industry, company_commercecode, company_organizationcode, taxpayer_code, taxpayer_aptitude, business_term, approval_date, registration_authority, nature_business, company_describe, company_logo
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">company_info</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">company_info as info</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>

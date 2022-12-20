@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.autogenerator.mapper.RuralLandMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.autogenerator.entity.RuralLand">
+        <id column="id" property="id" />
+        <result column="smid" property="smid" />
+        <result column="land_use_explain" property="landUseExplain" />
+        <result column="land_type" property="landType" />
+        <result column="land_describe" property="landDescribe" />
+        <result column="land_area" property="landArea" />
+        <result column="land_ownership" property="landOwnership" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, smid, land_use_explain, land_type, land_describe, land_area, land_ownership
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">rural_land</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">rural_land as land</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>

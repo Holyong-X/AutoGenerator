@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.autogenerator.mapper.GardenMonitorMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.autogenerator.entity.GardenMonitor">
+        <id column="id" property="id" />
+        <result column="garden_name" property="gardenName" />
+        <result column="garden_area_name" property="gardenAreaName" />
+        <result column="gardenMonitorLink" property="gardenMonitorLink" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, garden_name, garden_area_name, gardenMonitorLink
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">garden_monitor</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">garden_monitor as monitor</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>

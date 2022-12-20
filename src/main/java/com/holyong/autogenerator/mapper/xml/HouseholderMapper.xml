@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.autogenerator.mapper.HouseholderMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.autogenerator.entity.Householder">
+        <id column="householder_id" property="householderId" />
+        <result column="room_id" property="roomId" />
+        <result column="relation" property="relation" />
+        <result column="name" property="name" />
+        <result column="certificate_number" property="certificateNumber" />
+        <result column="personnel_type" property="personnelType" />
+        <result column="sex" property="sex" />
+        <result column="personnel_birth_date" property="personnelBirthDate" />
+        <result column="age" property="age" />
+        <result column="registered_address" property="registeredAddress" />
+        <result column="local_policestation" property="localPolicestation" />
+        <result column="english_surname" property="englishSurname" />
+        <result column="english_name" property="englishName" />
+        <result column="nation" property="nation" />
+        <result column="residential_address" property="residentialAddress" />
+        <result column="code_id" property="codeId" />
+        <result column="hy_modified" property="hyModified" />
+        <result column="personnel_logo" property="personnelLogo" />
+        <result column="personnel_phone" property="personnelPhone" />
+        <result column="household_register" property="householdRegister" />
+        <result column="politic_countenance" property="politicCountenance" />
+        <result column="graduated_from" property="graduatedFrom" />
+        <result column="educational_level" property="educationalLevel" />
+        <result column="company_unit" property="companyUnit" />
+        <result column="company_address" property="companyAddress" />
+        <result column="code_information" property="codeInformation" />
+        <result column="code_status" property="codeStatus" />
+        <result column="isolated_home" property="isolatedHome" />
+        <result column="transportation_type" property="transportationType" />
+        <result column="transportation_code" property="transportationCode" />
+        <result column="stopover_way" property="stopoverWay" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        householder_id, room_id, relation, name, certificate_number, personnel_type, sex, personnel_birth_date, age, registered_address, local_policestation, english_surname, english_name, nation, residential_address, code_id, hy_modified, personnel_logo, personnel_phone, household_register, politic_countenance, graduated_from, educational_level, company_unit, company_address, code_information, code_status, isolated_home, transportation_type, transportation_code, stopover_way
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">householder</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">householder as householder</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>

@@ -1,0 +1,18 @@
+package $!{package.Service};
+
+import $!{package.Entity}.$!{entity};
+import $!{superServiceClassPackage};
+import com.baomidou.mybatisplus.core.metadata.IPage;
+
+/**
+ * @author $!{author}
+ * @date $!{date}
+ * @description $!{table.comment} 服务类
+ */
+#if($!{kotlin})
+interface $!{table.serviceName} : $!{superServiceClass}<$!{entity}>
+#else
+public interface $!{table.serviceName} extends $!{superServiceClass}<$!{entity}> {
+##    IPage<$!{entity}> pageList(Map map);
+}
+#end

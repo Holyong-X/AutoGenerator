@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.autogenerator.mapper.RiverMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.autogenerator.entity.River">
+        <id column="river_id" property="riverId" />
+        <result column="SMID" property="smid" />
+        <result column="river_name" property="riverName" />
+        <result column="river_length" property="riverLength" />
+        <result column="river_water_lever" property="riverWaterLever" />
+        <result column="river_flow" property="riverFlow" />
+        <result column="river_flowto" property="riverFlowto" />
+        <result column="river_person" property="riverPerson" />
+        <result column="river_phone" property="riverPhone" />
+        <result column="river_capacity" property="riverCapacity" />
+        <result column="river_standardname" property="riverStandardname" />
+        <result column="river_level" property="riverLevel" />
+        <result column="river_code" property="riverCode" />
+        <result column="river_area" property="riverArea" />
+        <result column="river_belevation" property="riverBelevation" />
+        <result column="river_width" property="riverWidth" />
+        <result column="river_bwidth" property="riverBwidth" />
+        <result column="river_whether" property="riverWhether" />
+        <result column="river_village" property="riverVillage" />
+        <result column="river_citycode" property="riverCitycode" />
+        <result column="river_flowvillage" property="riverFlowvillage" />
+        <result column="river_start" property="riverStart" />
+        <result column="river_end" property="riverEnd" />
+        <result column="river_streettown" property="riverStreettown" />
+        <result column="river_time" property="riverTime" />
+        <result column="river_describe" property="riverDescribe" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        river_id, SMID, river_name, river_length, river_water_lever, river_flow, river_flowto, river_person, river_phone, river_capacity, river_standardname, river_level, river_code, river_area, river_belevation, river_width, river_bwidth, river_whether, river_village, river_citycode, river_flowvillage, river_start, river_end, river_streettown, river_time, river_describe
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">river</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">river as river</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>

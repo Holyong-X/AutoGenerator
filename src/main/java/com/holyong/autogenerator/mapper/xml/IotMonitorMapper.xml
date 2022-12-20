@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.autogenerator.mapper.IotMonitorMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.autogenerator.entity.IotMonitor">
+        <id column="id" property="id" />
+        <result column="iot_monitor_name" property="iotMonitorName" />
+        <result column="iot_monitor_type" property="iotMonitorType" />
+        <result column="iot_monitor_link" property="iotMonitorLink" />
+        <result column="device_type" property="deviceType" />
+        <result column="manage_unit" property="manageUnit" />
+        <result column="manage_personnel" property="managePersonnel" />
+        <result column="contact_manner" property="contactManner" />
+        <result column="ip_address" property="ipAddress" />
+        <result column="smin" property="smin" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, iot_monitor_name, iot_monitor_type, iot_monitor_link, device_type, manage_unit, manage_personnel, contact_manner, ip_address, smin
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">iot_monitor</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">iot_monitor as monitor</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.holyong.autogenerator.mapper.RoadMapper">
+
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.holyong.autogenerator.entity.Road">
+        <id column="road_id" property="roadId" />
+        <result column="SMID" property="smid" />
+        <result column="road_name" property="roadName" />
+        <result column="road_code" property="roadCode" />
+        <result column="road_length" property="roadLength" />
+        <result column="road_level" property="roadLevel" />
+        <result column="road_completiontime" property="roadCompletiontime" />
+        <result column="road_person" property="roadPerson" />
+        <result column="road_personphone" property="roadPersonphone" />
+        <result column="road_leaderjob" property="roadLeaderjob" />
+        <result column="road_startpoint" property="roadStartpoint" />
+        <result column="road_leadername" property="roadLeadername" />
+        <result column="road_violationlevel" property="roadViolationlevel" />
+        <result column="road_startstation" property="roadStartstation" />
+        <result column="road_streetinvolved" property="roadStreetinvolved" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        road_id, SMID, road_name, road_code, road_length, road_level, road_completiontime, road_person, road_personphone, road_leaderjob, road_startpoint, road_leadername, road_violationlevel, road_startstation, road_streetinvolved
+    </sql>
+
+    <!--自定义关联查询-->
+    <!-- 表名 -->
+    <sql id="t_name">road</sql>
+    <!-- 别名 -->
+    <sql id="t_alias">road as road</sql>
+    <!--外键表关联定义 -->
+    <sql id="join"></sql>
+</mapper>
